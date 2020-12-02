@@ -1,0 +1,621 @@
+@import url('https://fonts.googleapis.com/css?family=Saira+Condensed');
+
+body {
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+*{
+	margin:0px;
+	padding:0px;
+	font-family: "Saira Condensed", sans-serif;
+	box-sizing:border-box;
+    text-decoration:none;
+    list-style-type: none;
+
+}
+.flexy{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#menu{
+    width: 110%;
+    padding: 1% 0%;
+    background-color: #b7b7b7;
+    position:fixed;
+	top:0px;
+    left:0px;
+    z-index: 999;
+    border-bottom: #ff4f4f 2px solid;
+}
+
+#logo img{
+    width: 160px;
+    float: left;
+}
+#bars{
+    font-size: 20px;
+    color: #fff;
+    display: none;
+}
+.fontred {
+    color: #ff3030;
+}
+#navbar{
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#loginRegisterUL li {
+    font-size: 15px;
+    margin: 0px 5px;
+    display: inline-block;
+    
+}
+#loginRegisterUL  li a{
+    color: #ff3030;
+    text-decoration: none;
+    font-weight: bold;
+}
+#loginRegisterUL li a:hover{
+    color: white;
+}
+#navbar li{
+    margin-right: 0%;
+}
+#navbar li:last-child{
+    margin-right: 0;
+}
+#navbar li a{
+    color: black;
+    font-size: 19px;
+    position: relative;
+    font-family: "Saira Condensed", sans-serif;
+	font-weight:bold;
+}
+#navbar li a:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -6px;
+    left: 0;
+    background-color: #ff3030;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+#navbar li a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+#navbar li .active{
+    color:#ff3030;
+}
+/*----------SLIDER---------*/
+#slider{
+    height: 100vh;
+	background-image: url(../images/gallery/traviscover.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+#sliderText{
+    text-align: center;
+    background-color:rgba(0,0,0,0.65);
+    color: #fff;
+    width: 100%;
+    padding: 4% 11%;
+}
+#sliderText h1{
+    font-size: 50px;
+}
+#sliderText h2{
+    font-size: 21px;
+    font-weight: normal;
+    margin-top: 1%; 
+}
+#sliderText span:first-child{
+    color: #ff3030;
+}
+#sliderText span:last-child{
+    color: #808080;
+}
+/*--------------MAIN----------------*/
+.wrapper{
+    width: 75%;
+    margin: 0 auto;
+}
+#change{
+    text-align: center;
+    margin-top: 5%;
+    word-wrap: wrap;
+}
+#change p, #change h3{
+    font-family: "Saira Condensed", sans-serif;
+    font-weight: bold;
+    color: #101010;
+    font-size: 33px;
+}
+#change p{
+    margin-top: 1%;
+    font-size: 19px;
+    line-height: 120%;
+}
+.content{
+    margin-top: 2%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contentBlock{
+    width: 48%;
+    height: 340px;
+    transition: 1s;
+    position: relative;
+}
+.contentBlock:nth-child(3), .contentBlock:nth-child(4){
+    margin-top: 2%;
+}
+#image1{
+    background-image: url(../images/albums/owlPharaoh.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#image2{
+    background-image: url(../images/albums/dbr.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#image3{
+    background-image: url(../images/albums/rodeo.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#image4{
+    background-image: url(../images/albums/bittsm.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ed4949;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0.8;
+}
+.overlay p{
+    white-space: nowrap;
+    font-size: 22px;
+    color: black;
+}
+.contentBlock:hover .overlay {
+    width: 100%;
+}
+/*------------MAP & FOOTER------------*/
+#map iframe{
+    background-color: #ff3030;
+    width: 100%;
+    height: 340px;
+    margin-top: 2%;
+}
+footer{
+    padding: 0.5% 0%;
+	width: 100%;
+	margin-top: 50px;
+    background-color:#b7b7b7;
+    color: #ff3030;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+#group{
+    display: flex;
+    justify-content: space-between;
+}
+#webicons{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+#webicons a{
+    margin-left: 3%;
+    font-size: 40px;
+    color: black
+}
+#webicons a:hover{
+    color: #ff3030;
+}
+#copyright{
+    text-align: center;
+}
+
+/*------------------GALLERY---------------------*/
+.gallery{
+    margin-top: 100px;
+}
+.gallery h1{
+    margin-top: 5%;
+    font-family: "Saira Condensed", sans-serif;
+    text-align: center;
+}
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.row img{
+    width: 50%;
+    height: 340px;
+    transition: 0.4s;
+    border: solid 2px #ff3030 ;
+}
+.row img:nth-child(1), .row img:nth-child(2){
+    margin-top: 2%;
+}
+.row img:hover{
+    transform: scale(1.1);
+    border:none;
+}
+
+
+/*---------------------TOURS------------------*/
+
+.tours{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+#tours{
+    width: 61%;
+}
+.tour{
+    width: 100%;
+    padding: 1%;
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid black;
+}
+.tour:first-child{
+    margin-top: 0%; 
+}
+.tour img{
+    width: 60%;
+    height: 250px; 
+    border: 2px solid black;
+}
+.text{
+    width: 35%;
+    padding-right: 2%;
+}
+.text h2{
+    font-size: 21px;
+}
+.text h4, .text p{
+    margin-top: 1%;
+    font-size: 18px; 
+} 
+#right{
+    width: 32%;
+    text-align: center; 
+}
+#schedule{
+    background-color:#ff3030;
+    padding: 3%;
+}
+#schedule h1{
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 30px;
+}
+#schedule p{
+    font-size: 18px;
+    margin-top: 3%;
+    font-family: "Saira Condensed", sans-serif;
+    font-weight: bold;
+}
+.select, #submit{
+    width: 100%;
+    margin-top: 3%;
+    height: 40px;
+    border: none;
+    font-family: "Saira Condensed", sans-serif;
+    font-weight: bold;
+    color: black;
+}
+.select{
+    padding: 2%;
+    font-size: 13px;
+}
+#area{
+    height: 150px;
+}
+
+.select:focus{
+    border: 1px solid black;
+}
+#submit{
+    font-size: 17px;
+    background-color: white;
+}
+#submit:hover{
+    background-color:#878787;
+}
+#prices{
+    margin-top: 50px;
+}
+#prices p{
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 18px;
+    color: #101010;
+    font-weight: bold;
+}
+.price{
+    background-color: #ff3030;
+    height: 70px;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*----------AUTHOR---------------*/
+
+#author{
+    margin-top: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.authorImg{
+    width: 48%;
+    height: 600px;
+}
+#authorText{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    text-align: center;
+}
+#authorText h1{
+    margin-bottom: 2%;
+    font-family: "Saira Condensed", sans-serif;
+}
+#authorText h2{
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 30px;
+}
+.skills{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+.skills img{
+    width: 140px;
+}
+.skills span{
+    font-size: 100px;
+    color: #ff3030;
+}
+
+/*---------------MODALS-------------------*/
+
+/*-----------------QUERY-----------------*/
+
+@media screen and (max-width: 1200px){
+    
+    #navbar{
+        width: 500px;
+    }
+    #navbar li a, .tour h4{
+        font-size: 17px;
+    }
+    #sliderText h1{
+        font-size: 45px;
+    }
+    #sliderText h2{
+        font-size: 18px;
+    }
+    #change h3{
+        font-size: 27px;
+    }
+    #change p, .tour p{
+        font-size: 16px;
+    }
+    #webicons a{
+        font-size: 35px;    
+    }
+    .tour h3{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 992px){
+
+   
+    #navbar{
+        display: none;
+    }
+    #bars{
+        display: block;
+    } 
+    #sliderText h1{
+        font-size: 40px;
+    }
+    #sliderText h2{
+        font-size: 17px;
+    }
+    .contentBlock{
+        width: 100%;
+        margin-top: 2%; 
+    }
+    .right{
+        left: 100%;
+    }
+    .contentBlock:hover .right{
+        left:0;
+    }
+    #map iframe{
+        height: 300px;
+    }
+    .row img{
+        width: 100%;
+        height: 300px;
+        border:none;
+        margin-top: 1%; 
+    }
+    .row img:hover{
+        transform: none;
+    }
+    .row img:nth-child(2){
+        margin-top: 1%;
+    }
+
+/*--------TOURS QUERY-------*/
+
+    .tour{
+        flex-direction: column;
+    }
+    .tour img{
+        width: 100%;
+    }
+    .text{
+        width: 100%;
+    }
+    .price{
+        margin-top: 8%;
+    }
+    #prices{
+        margin-top: 30%;
+    }
+    #prices p{
+        font-size: 16px;
+    }
+    #tours{
+        width: 55%;
+    }
+    #right{
+        width: 40%;
+    }
+    #schedule h1{
+        font-size: 27px;
+    }
+    #schedule p{
+        font-size: 15px;
+    }
+
+/*---------AUTHOR QUERY---------*/
+
+    #author{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .authorImg{
+        width: 100%;
+        margin-bottom: 2%;
+        padding: 0% 15%;
+        height: 475px;
+    }
+    #authorText{
+        width: 100%;
+    }
+    .skills{
+        justify-content: space-around;
+        height: auto;
+        /*margin: 3% 0%;*/    
+    }
+    #author h1{
+        font-size: 30px;
+        margin: 2% 0%;
+    }
+    #authorText h2{
+        margin: 2% 0%;
+        font-size: 28px;
+    }
+    #contact h3{
+        font-size: 18px;
+    }
+    #contact p{
+        font-size: 15px; 
+    }
+}
+
+@media screen and (max-width: 735px){
+
+    #group{
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #webicons{
+        width: 55%;
+        order: 1;
+        justify-content: space-around;
+        margin-bottom: 1%;
+    }
+    #contact{
+        order: 2;
+        text-align: center;
+        margin-bottom: 1%;
+    }
+    .tours{
+        flex-flow: column;
+    }
+    #tours{
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+    #right{
+        width: 100%;
+    }
+    #prices{
+        margin-top: 10%;
+    }
+    .price{
+        margin-top: 4%;
+    }
+    .authorImg{
+        padding: 0%;
+    }
+}
+
+@media screen and (max-width: 445px){
+
+    .authorImg{
+        padding: 0%;
+        height: 300px;
+    }
+    .skills{
+        flex-flow: column;
+    }
+}
