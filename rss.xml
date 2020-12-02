@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+	<channel>
+		<item>
+			<title>Travis Scott Fan Website</title>
+			<description>This website is dedicated to best artist ever, Travis Scott.</description>
+			<link>https://travis-scott-laflame.000webhostapp.com/index.html</link>
+		</item>
+		<item>
+			<title>Travis Scott Gallery</title>
+			<description>You can find here some of his best pictures.</description>
+			<link>https://travis-scott-laflame.000webhostapp.com/performances.html</link>
+		</item>
+		<item>
+			<title>Travis Scott Tour Schedule</title>
+			<description>Find out when is Travis Scott going to visit your place!</description>
+			<link>https://travis-scott-laflame.000webhostapp.com/tour.html</link>
+		</item>
+		<item>
+			<title>Travis Scott Website - About Author</title>
+			<description>Find out who made this website!</description>
+			<link>https://travis-scott-laflame.000webhostapp.com/author.html</link>
+		</item>
+
+
+	</channel>
+</rss>
